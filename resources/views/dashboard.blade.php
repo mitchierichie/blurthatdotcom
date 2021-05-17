@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="overflow-hidden">
                 <div class="text-center">
-                    @foreach(auth()->user()->image_hashes()->orderBy('created_at')->limit(100)->get() as $image_hash)
+                    @foreach(auth()->user()->image_hashes()->orderBy('created_at', 'DESC')->limit(100)->get() as $image_hash)
                         <div class="bg-white p-4 m-4 rounded-md shadow-md">
                             <div
                                 class="grid grid-cols-2 place-content-center">
